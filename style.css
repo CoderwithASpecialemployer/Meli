@@ -1,22 +1,18 @@
 :root {
-  --color-bg: #ffffff;
-  --color-text: #333333;
-  --color-heading: #222222;
-  --color-accent: #b12d2d;
-  --color-muted: #f7f7f7;
+  --bg: #ffffff;
+  --text: #333333;
+  --heading: #222222;
+  --accent: #b12d2d;
+  --muted: #f7f7f7;
   --transition: 0.3s ease;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: var(--color-bg);
-  color: var(--color-text);
+  background: var(--muted);
+  color: var(--text);
   line-height: 1.6;
 }
 
@@ -26,30 +22,29 @@ body {
   padding: 0 1rem;
 }
 
-/* HEADER */
+/* Header */
 .site-header {
   position: sticky;
   top: 0;
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(5px);
-  z-index: 1000;
+  background: var(--bg);
   border-bottom: 1px solid #e0e0e0;
+  z-index: 1000;
 }
 .header-inner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem 0;
 }
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 600;
-  color: var(--color-accent);
+  color: var(--accent);
   text-decoration: none;
 }
 .nav-toggle {
   display: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -60,64 +55,49 @@ body {
   gap: 1.5rem;
 }
 .site-nav a {
-  color: var(--color-text);
+  color: var(--text);
   text-decoration: none;
   font-weight: 500;
   transition: color var(--transition);
 }
 .site-nav a:hover {
-  color: var(--color-accent);
+  color: var(--accent);
 }
 
-/* MOBILE NAV */
+/* Mobile Nav */
 @media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
-  }
+  .nav-toggle { display: block; }
   .site-nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: var(--color-bg);
-    max-height: 0;
-    overflow: hidden;
+    position: absolute; top: 100%; left: 0;
+    width: 100%; background: var(--bg);
+    max-height: 0; overflow: hidden;
     transition: max-height var(--transition);
   }
-  .site-nav.open {
-    max-height: 300px;
-  }
-  .site-nav ul {
-    flex-direction: column;
-    padding: 1rem;
-  }
+  .site-nav.open { max-height: 300px; }
+  .site-nav ul { flex-direction: column; padding: 1rem; }
 }
 
-/* HERO */
+/* Hero */
 .hero {
   position: relative;
-  height: 80vh;
+  height: 70vh;
   background: url('https://source.unsplash.com/1600x900/?tailor-shop,sewing') center/cover no-repeat;
 }
 .hero-overlay {
-  position: absolute;
-  inset: 0;
+  position: absolute; inset: 0;
   background: rgba(0,0,0,0.4);
 }
 .hero-content {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 50%; transform: translateY(-50%);
   text-align: center;
-  color: #ffffff;
+  color: #fff;
 }
 .hero-content h1 {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
+  font-size: 2.8rem; margin-bottom: 1rem;
 }
 .hero-content p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.1rem; margin-bottom: 1.5rem;
 }
 .btn {
   display: inline-block;
@@ -128,7 +108,7 @@ body {
   transition: background var(--transition), transform var(--transition);
 }
 .btn-primary {
-  background: var(--color-accent);
+  background: var(--accent);
   color: #fff;
 }
 .btn-primary:hover {
@@ -136,16 +116,35 @@ body {
   transform: translateY(-3px);
 }
 
-/* SERVICES */
+/* Handwerk & Stil */
+.craft-style {
+  background: var(--bg);
+  padding: 4rem 0;
+}
+.craft-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+.craft-img img { width: 100%; border-radius: 8px; }
+.craft-text h2 {
+  font-size: 2rem;
+  color: var(--heading);
+  margin-bottom: 1rem;
+}
+.craft-text p { color: var(--text); }
+
+/* Services */
 .services {
-  background: var(--color-muted);
+  background: var(--muted);
   padding: 4rem 0;
   text-align: center;
 }
 .services h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: var(--color-heading);
+  color: var(--heading);
 }
 .services-grid {
   display: grid;
@@ -153,7 +152,7 @@ body {
   gap: 2rem;
 }
 .service-card {
-  background: #fff;
+  background: var(--bg);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -163,37 +162,18 @@ body {
   transform: translateY(-5px);
 }
 .service-card img {
-  width: 100%;
-  height: 180px;
+  width: 100%; height: 180px;
   object-fit: cover;
 }
 .service-card h3 {
-  padding: 1rem;
-  color: var(--color-accent);
+  padding: 1rem; color: var(--accent);
 }
 .service-card p {
-  padding: 0 1rem 1rem;
-  color: var(--color-text);
+  padding: 0 1rem 1rem; color: var(--text);
   font-size: 0.95rem;
 }
 
-/* ABOUT */
-.about {
-  padding: 4rem 0;
-  text-align: center;
-}
-.about h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--color-heading);
-}
-.about p {
-  max-width: 800px;
-  margin: 0 auto;
-  color: var(--color-text);
-}
-
-/* CONTACT */
+/* Contact */
 .contact {
   padding: 4rem 0;
 }
@@ -201,6 +181,7 @@ body {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 2rem;
+  color: var(--heading);
 }
 .contact-grid {
   display: flex;
@@ -210,23 +191,22 @@ body {
 }
 .contact-info,
 .contact-times {
-  background: #fff;
+  background: var(--bg);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 .contact-times table {
-  width: 100%;
-  border-collapse: collapse;
+  width: 100%; border-collapse: collapse;
 }
 .contact-times td {
   padding: 0.5rem 1rem;
   border-bottom: 1px solid #e0e0e0;
 }
 
-/* FOOTER */
+/* Footer */
 .site-footer {
-  background: var(--color-bg);
+  background: var(--bg);
   padding: 1.5rem 0;
   text-align: center;
   border-top: 1px solid #e0e0e0;
