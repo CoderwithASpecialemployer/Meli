@@ -2,8 +2,8 @@
   --bg: #ffffff;
   --text: #333333;
   --heading: #222222;
-  --accent: #b12d2d; 
-  --muted: #f7f7f7; 
+  --accent: #b12d2d;
+  --muted: #f7f7f7;
   --transition: 0.3s ease;
 }
 
@@ -77,11 +77,11 @@ body {
   .site-nav ul { flex-direction: column; padding: 1rem; }
 }
 
-/* Hero */
+/* HERO */
 .hero {
   position: relative;
-  height: 70vh;
-  background: url('https://source.unsplash.com/1600x900/?tailor-shop,sewing') center/cover no-repeat;
+  height: 80vh;
+  background: url('https://images.unsplash.com/photo-1520614073993-1abd32aac15b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
 }
 .hero-overlay {
   position: absolute; inset: 0;
