@@ -1,61 +1,77 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Änderungsschneiderei Meli</title>
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Änderungsschneiderei Meli</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <div class="logo">Meli</div>
-        <nav>
-            <a href="#">Startseite</a>
-            <a href="#">Leistungen</a>
-            <a href="#">Über uns</a>
-            <a href="#">Kontakt</a>
-        </nav>
-    </header>
+  <header class="header">
+    <img src="logo.png" alt="Logo Meli" class="logo" />
+    <nav class="nav">
+      <a href="#hero">Startseite</a>
+      <a href="#services">Leistungen</a>
+      <a href="#about">Über uns</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+  </header>
 
-    <section class="hero">
-        <h1>Änderungsschneiderei Meli</h1>
-        <p>Maßarbeit mit Stil – Ihre Schneiderei in Recklinghausen</p>
-    </section>
+  <section id="hero" class="hero">
+    <h1>Maßgeschneidert. Für deinen Style.</h1>
+    <p>Änderungsschneiderei Meli – Dein Outfit, unser Handwerk.</p>
+    <a href="#services" class="btn">Mehr erfahren</a>
+  </section>
 
-    <section class="services">
-        <h2>Unsere Leistungen</h2>
-        <div class="service-cards">
-            <div class="card">
-                <img src="https://source.unsplash.com/400x300/?sewing,threads" alt="Änderungen" />
-                <h3>Änderungen</h3>
-                <p>Wir ändern Ihre Kleidung passgenau nach Wunsch.</p>
-            </div>
-            <div class="card">
-                <img src="https://source.unsplash.com/400x300/?tailor,workshop" alt="Maßanfertigung" />
-                <h3>Maßanfertigung</h3>
-                <p>Individuelle Kleidungsstücke nach Maß für Sie gefertigt.</p>
-            </div>
-            <div class="card">
-                <img src="https://source.unsplash.com/400x300/?fabric,design" alt="Beratung" />
-                <h3>Beratung</h3>
-                <p>Kompetente Beratung für Stil, Schnitt und Stoffauswahl.</p>
-            </div>
-        </div>
-    </section>
+  <section id="services" class="services">
+    <h2>Unsere Leistungen</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?sewing" alt="Änderungen">
+        <h3>Änderungen</h3>
+        <p>Präzise Änderungen für jeden Stil.</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?tailor" alt="Maßanfertigung">
+        <h3>Maßanfertigung</h3>
+        <p>Dein Unikat nach Maß.</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?fabric" alt="Beratung">
+        <h3>Beratung</h3>
+        <p>Individuelle Stil- & Stoffberatung.</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="contact">
-        <h2>Kontakt & Öffnungszeiten</h2>
-        <p>Castroper Str. 11, 45665 Recklinghausen</p>
+  <section id="about" class="about">
+    <h2>Über uns</h2>
+    <p>Wir lieben Fashion und Handwerk! Seit 2010 veredeln wir deine Lieblingsstücke mit Leidenschaft – egal ob 12 oder 99 Jahre jung.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Kontakt & Öffnungszeiten</h2>
+    <div class="contact-grid">
+      <div>
+        <p><strong>Adresse:</strong><br>Castroper Str. 11<br>45665 Recklinghausen</p>
+        <p><strong>Telefon:</strong> 02361 123456</p>
+        <p><strong>E-Mail:</strong> info@meli.de</p>
+      </div>
+      <div>
         <table>
-            <tr><td>Montag – Freitag:</td><td>10:00–13:00 & 14:00–18:00</td></tr>
-            <tr><td>Samstag:</td><td>10:00–13:00</td></tr>
-            <tr><td>Sonntag:</td><td>Geschlossen</td></tr>
+          <tr><td>Montag – Freitag</td><td>10:00–13:00<br>14:00–18:00</td></tr>
+          <tr><td>Samstag</td><td>10:00–13:00</td></tr>
+          <tr><td>Sonntag</td><td>Geschlossen</td></tr>
         </table>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Änderungsschneiderei Meli</p>
-    </footer>
+  <footer class="footer">
+    <p>&copy; 2025 Änderungsschneiderei Meli</p>
+  </footer>
 </body>
 </html>
