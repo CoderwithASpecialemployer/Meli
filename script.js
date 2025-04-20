@@ -1,21 +1,19 @@
-// Modal öffnen & schließen
-const modal = document.getElementById('modal');
-const openBtn = document.getElementById('openModal');
-const closeBtn = document.getElementById('closeModal');
+// Mobile‐Nav Toggle
+const navToggle = document.querySelector('.nav-toggle');
+const siteNav   = document.querySelector('.site-nav');
 
-openBtn.addEventListener('click', () => {
-  modal.style.display = 'flex';
-});
-closeBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
-window.addEventListener('click', e => {
-  if (e.target === modal) modal.style.display = 'none';
+navToggle.addEventListener('click', () => {
+  siteNav.classList.toggle('open');
 });
 
-// Formular-Handling
-document.getElementById('appointmentForm').addEventListener('submit', e => {
-  e.preventDefault();
-  alert('Danke! Wir melden uns in Kürze bei dir 😊');
-  modal.style.display = 'none';
+// Smooth Scroll für Ankerlinks
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+      siteNav.classList.remove('open');
+    }
+  });
 });
