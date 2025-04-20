@@ -4,70 +4,81 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Änderungsschneiderei Meli</title>
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="header">
-    <img src="logo.png" alt="Meli-Logo" class="logo" />
-    <nav>
-      <a href="#hero">Start</a>
-      <a href="#services">Leistungen</a>
-      <a href="#about">Über uns</a>
-      <a href="#contact">Kontakt</a>
-    </nav>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">Meli</a>
+      <button class="nav-toggle" aria-label="Menü öffnen">&#9776;</button>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="#hero">Start</a></li>
+          <li><a href="#services">Leistungen</a></li>
+          <li><a href="#about">Über uns</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
+  <!-- HERO -->
   <section id="hero" class="hero">
-    <div class="hero-text">
-      <h1>Dein Style. Unsere Nadel.</h1>
-      <p>Perfekte Änderungen & Maßanfertigungen in Recklinghausen</p>
-      <button id="openModal" class="btn">Termin vereinbaren</button>
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <h1>Handwerk & Stil vereint</h1>
+      <p>Änderungsschneiderei Meli – höchste Präzision, edles Design.</p>
+      <a href="#contact" class="btn btn-primary">Kontakt aufnehmen</a>
     </div>
   </section>
 
-  <section id="services" class="services">
-    <h2>Was wir für dich tun</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?sewing,atelier" alt="Änderungen">
-        <h3>Präzise Änderungen</h3>
-        <p>Jacken, Hosen, Kleider – wir passen alles an.</p>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?tailor,measuring" alt="Maßanfertigung">
+  <!-- SERVICES -->
+  <section id="services" class="services container">
+    <h2>Leistungen</h2>
+    <div class="services-grid">
+      <article class="service-card">
+        <img src="https://source.unsplash.com/600x400/?sewing,atelier" alt="Änderungen">
+        <h3>Änderungen</h3>
+        <p>Passgenaue Anpassungen für jedes Kleidungsstück.</p>
+      </article>
+      <article class="service-card">
+        <img src="https://source.unsplash.com/600x400/?tailor,measuring" alt="Maßanfertigung">
         <h3>Maßanfertigung</h3>
-        <p>Dein Unikat: perfekt auf dich zugeschnitten.</p>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?fabric,texture" alt="Beratung">
+        <p>Individuelle Einzelstücke ganz nach Ihrem Stil.</p>
+      </article>
+      <article class="service-card">
+        <img src="https://source.unsplash.com/600x400/?fabric,design" alt="Stilberatung">
         <h3>Stilberatung</h3>
-        <p>Professionelle Tipps zu Schnitt & Stoff.</p>
-      </div>
+        <p>Kompetente Beratung zu Schnitt, Stoff und Stil.</p>
+      </article>
     </div>
   </section>
 
-  <section id="about" class="about">
-    <div class="about-text">
-      <h2>Wer wir sind</h2>
-      <p>Seit 2010 mit Leidenschaft dabei – für Kund*innen von 12 bis 99 Jahren.  
-      Wir lieben Mode, Handwerk und jedes Detail.</p>
-    </div>
-    <div class="about-img">
-      <img src="https://source.unsplash.com/600x400/?sewing,workspace" alt="Atelier">
-    </div>
+  <!-- ABOUT -->
+  <section id="about" class="about container">
+    <h2>Über uns</h2>
+    <p>
+      Seit 2010 steht Änderungsschneiderei Meli für Liebe zum Detail  
+      und höchsten Anspruch an Qualität. Traditionelles Handwerk  
+      trifft hier auf modernes Design.
+    </p>
   </section>
 
-  <section id="contact" class="contact">
+  <!-- CONTACT -->
+  <section id="contact" class="contact container">
     <h2>Kontakt & Öffnungszeiten</h2>
     <div class="contact-grid">
-      <div>
-        <p><strong>Adresse</strong><br>Castroper Str. 11<br>45665 Recklinghausen</p>
-        <p><strong>Telefon</strong><br>02361 123456</p>
-        <p><strong>E‑Mail</strong><br>info@meli.de</p>
+      <div class="contact-info">
+        <p><strong>Adresse:</strong><br>Castroper Str. 11<br>45665 Recklinghausen</p>
+        <p><strong>Telefon:</strong><br>02361 123456</p>
+        <p><strong>E‑Mail:</strong><br>info@meli.de</p>
+        <p><a href="https://maps.google.com?q=Castroper+Str.+11+45665+Recklinghausen" target="_blank">→ Anfahrt</a></p>
       </div>
-      <div>
+      <div class="contact-times">
         <table>
           <tr><td>Mo–Fr</td><td>10:00–13:00<br>14:00–18:00</td></tr>
           <tr><td>Sa</td><td>10:00–13:00</td></tr>
@@ -77,23 +88,12 @@
     </div>
   </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 Änderungsschneiderei Meli</p>
-  </footer>
-
-  <!-- Modal -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span id="closeModal" class="close">&times;</span>
-      <h3>Termin vereinbaren</h3>
-      <form id="appointmentForm">
-        <input type="text" name="name" placeholder="Dein Name" required>
-        <input type="email" name="email" placeholder="Deine E‑Mail" required>
-        <input type="tel" name="phone" placeholder="Deine Telefonnummer" required>
-        <button type="submit" class="btn">Absenden</button>
-      </form>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Änderungsschneiderei Meli</p>
     </div>
-  </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
